@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuidv4.min.js"
+    integrity="sha512-BCMqEPl2dokU3T/EFba7jrfL4FxgY6ryUh4rRC9feZw4yWUslZ3Uf/lPZ5/5UlEjn4prlQTRfIPYQkDrLCZJXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    window.myUniqueId = uuidv4();
+  </script>
+</head>
+
+<body>
+  <p>My opener:
+    <script>document.write(window.opener?.myUniqueId);</script>
+  </p>
+  <p>Me:
+    <script>document.write(window.myUniqueId);</script>
+  </p>
+
+  <button onclick="window.open('./index.html')">Open Sesame</button>
+</body>
+
+</html>
